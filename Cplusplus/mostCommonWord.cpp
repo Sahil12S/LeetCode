@@ -1,19 +1,21 @@
+// Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.
+
 #include <iostream>
 #include <string>
-#include <map>
-#include <vector>
-#include <algorithm>
 #include <locale>
+#include <vector>
+#include <map>
+#include <set>
 
 using namespace std;
 
 string mostCommonWord(string paragraph, vector<string>& banned);
 
-
 int main(int argc, char const *argv[])
 {
-    string paragraph = "Bob";
-    vector<string> banned = {""};
+    string paragraph = "Bob hit a ball, the hit BALL flew far after it was hit";
+    // string paragraph = "Bob";
+    vector<string> banned = {"hit"};
     cout << mostCommonWord(paragraph, banned) << endl;
     return 0;
 }
@@ -21,41 +23,65 @@ int main(int argc, char const *argv[])
 string mostCommonWord(string paragraph, vector<string>& banned) {
     map<string, int> wordCount;
     map<string, int>::iterator it;
+    set<string> bannedWords;
 
-    string word;
+    locale loc;
+
+    for (string word : banned) {
+        bannedWords.insert(word);
+    }
+
+    string tempWord = "";
     for (char c : paragraph) {
-        if (isalpha(c)) {
-            if (c >= 65 && c <= 90 ) {
-                c += 32;
+        if (!isalpha(c)) {
+            // word is complete. store it.
+
+            if (tempWord.length() <= 0) continue;
+
+            if (bannedWords.count(tempWord) != 0) {
+                tempWord = "";
+                continue;
             }
-            word += c;
-        } else if (word.length() > 0) {
-            cout << "word:" << word << "<-" << endl;
-            it = wordCount.find(word);
+
+            it = wordCount.find(tempWord);
             if (it != wordCount.end()) {
-                ++it->second;
+                it->second++;
             } else {
-                wordCount[word] = 1;
+                wordCount[tempWord] = 1;
             }
-            word = "";
+            tempWord = "";
+        } else {
+            // Create a word by adding characters.
+            tempWord += tolower(c);
         }
     }
 
-    for (string w : banned) {
-        wordCount.erase(w);
+    // Paragraph ends with an alphabet.
+    if (tempWord.length() > 0) {
+        // cout << bannedWords.count(tempWord) << endl;
+        if (bannedWords.count(tempWord) == 0) {
+            // cout << "tempWord: " << tempWord << endl;
+            it = wordCount.find(tempWord);
+            if (it != wordCount.end()) {
+                it->second++;
+            } else {
+                wordCount[tempWord] = 1;
+            }
+            tempWord = "";
+        }
     }
 
-    it = wordCount.begin();
     string ans;
     int maxCount = 0;
-    while (it != wordCount.end()) {
-        // cout << "map: " << it->first << endl;
+    for (it = wordCount.begin(); it != wordCount.end(); ++it) {
         if (it->second > maxCount) {
             maxCount = it->second;
             ans = it->first;
-            // cout << "ans is: " << ans << endl;
+            // cout << "ans: " << ans << ", maxCount: " << maxCount << endl;
         }
-        ++it;
     }
     return ans;
+
 }
+
+
