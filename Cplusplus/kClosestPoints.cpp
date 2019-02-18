@@ -25,15 +25,15 @@ int main()
 
 vector< vector<int>> kClosest(vector< vector<int>> points, int K)
 {
-    map<double, vector< vector<int>>> distPoints;
+    map<double, int> distPoints;
 
-    for (vector<int> point : points)
+    for (int i = 0; i < points.size(); i++)
     {
-        double dist = distance(point[0], point[1]);
+        double dist = distance(points[i][0], points[i][1]);
 
         if (distPoints.count(dist) == 0)
         {
-            distPoints[dist].push_back(point);
+            distPoints[dist] = i;
         }
     }
 
@@ -43,11 +43,8 @@ vector< vector<int>> kClosest(vector< vector<int>> points, int K)
 
     for (;it != distPoints.end() && K > 0; it++)
     {
-        for (vector<int> point : it->second)
-        {
-            K--;
-            ans.push_back(point);
-        }
+        K--;
+        ans.push_back(points[it->second]);
     }
     return ans;
 }
