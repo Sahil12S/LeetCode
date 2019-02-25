@@ -34,9 +34,9 @@ void nextPermutation(vector<int>& nums)
     }
 
     auto to_swap_with = upper_bound(nums.rbegin(), index, *index);
-    cout << "Check: " << *to_swap_with << endl;
+    // cout << "Check: " << *to_swap_with << endl;
     iter_swap(index, to_swap_with);
-    cout << "index: " << *index << ", next: " << *to_swap_with << endl;
+    // cout << "index: " << *index << ", next: " << *to_swap_with << endl;
     print(nums);
     reverse(nums.rbegin(), index);
 }

@@ -120,9 +120,7 @@ void Graph::BFS(int vertex)
                 visited[i] = true;
             }
         }
-
     }
-
 }
 
 
