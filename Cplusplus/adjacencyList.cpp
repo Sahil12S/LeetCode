@@ -18,7 +18,7 @@ private:
         }
     };
     
-    vector< adjNode*> graph;
+    vector<adjNode*> graph;
     int numVertices;
 
 public:
