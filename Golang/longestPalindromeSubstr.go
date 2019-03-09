@@ -3,6 +3,9 @@
 package main
 
 func longestPalindrom(s string) string {
+	if len(s) == 0 {
+		return ""
+	}
 	start := 0
 	end := 0
 

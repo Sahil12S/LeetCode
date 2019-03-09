@@ -23,9 +23,22 @@ func main() {
 			fmt.Println(isPalindrome(x))
 	*/
 
-	/* Longest Palindrome Substring (longestPalindromeSubstr.go) */
-	// s := "babad"
-	s := "cbbd"
-	fmt.Println(longestPalindrom(s))
+	/*
+		Longest Palindrome Substring (longestPalindromeSubstr.go)
 
+			// s := "babad"
+			s := ""
+			fmt.Println(longestPalindrom(s))
+	*/
+
+	/*
+		Check if a string is palindrome (validPalindrome.go)
+
+		a := validPalindrome("A man, a plan, a canal: Panama")
+		fmt.Println(a)
+	*/
+
+	/* Valid Palindrome 2 (validPalindrome2.go) */
+	s := "abca"
+	fmt.Println(isPalindrome2(s))
 }
