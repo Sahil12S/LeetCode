@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func twoSum(nums []int, target int) []int {
 	myMap := make(map[int]int)
 	var ans []int
@@ -19,14 +17,4 @@ func twoSum(nums []int, target int) []int {
 		myMap[nums[i]] = i
 	}
 	return ans
-}
-
-func main() {
-	// nums := []int{2, 7, 11, 15}
-	nums := []int{0, 4, 3, 0}
-	target := 0
-
-	ans := twoSum(nums, target)
-
-	fmt.Println(ans)
 }
