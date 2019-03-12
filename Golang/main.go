@@ -34,11 +34,22 @@ func main() {
 	/*
 		Check if a string is palindrome (validPalindrome.go)
 
-		a := validPalindrome("A man, a plan, a canal: Panama")
-		fmt.Println(a)
+			a := validPalindrome("A man, a plan, a canal: Panama")
+			fmt.Println(a)
 	*/
 
-	/* Valid Palindrome 2 (validPalindrome2.go) */
-	s := "abca"
-	fmt.Println(isPalindrome2(s))
+	/*
+		Valid Palindrome 2 (validPalindrome2.go)
+
+			s := "abca"
+			fmt.Println(isPalindrome2(s))
+	*/
+	/* top K frequent numbers in array (topKFrequent.go) */
+	nums := []int{1, 1, 1, 2, 2, 3}
+	k := 2
+
+	ans := topKFrequent(nums, k)
+	// for num := range ans {
+	fmt.Println(ans)
+	// }
 }
