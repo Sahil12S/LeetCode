@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	/*
 		2 SUM (2Sum.go)
@@ -9,12 +7,9 @@ func main() {
 			// nums := []int{2, 7, 11, 15}
 			nums := []int{0, 4, 3, 0}
 			target := 0
-
 			ans := twoSum(nums, target)
-
 			fmt.Println(ans)
 	*/
-
 	/*
 		Number is Palindrome or not (palindromeNumber.go)
 
@@ -22,7 +17,6 @@ func main() {
 			x := 212
 			fmt.Println(isPalindrome(x))
 	*/
-
 	/*
 		Longest Palindrome Substring (longestPalindromeSubstr.go)
 
@@ -30,26 +24,41 @@ func main() {
 			s := ""
 			fmt.Println(longestPalindrom(s))
 	*/
-
 	/*
 		Check if a string is palindrome (validPalindrome.go)
 
 			a := validPalindrome("A man, a plan, a canal: Panama")
 			fmt.Println(a)
 	*/
-
 	/*
 		Valid Palindrome 2 (validPalindrome2.go)
 
 			s := "abca"
 			fmt.Println(isPalindrome2(s))
 	*/
-	/* top K frequent numbers in array (topKFrequent.go) */
-	nums := []int{1, 1, 1, 2, 2, 3}
-	k := 2
+	/*
+		top K frequent numbers in array (topKFrequent.go)
 
-	ans := topKFrequent(nums, k)
-	// for num := range ans {
-	fmt.Println(ans)
-	// }
+			nums := []int{1, 1, 1, 2, 2, 3}
+			k := 2
+
+			ans := topKFrequent(nums, k)
+			fmt.Println(ans)
+	*/
+	/*
+		Search rotated sorted array (searchArray.go)
+
+			nums := []int{4, 5, 6, 7, 0, 1, 2}
+			target := 3
+			ans := search(nums, target)
+			fmt.Println(ans)
+	*/
+	/*
+		Search rotated sorted array 2 (searchArray2.go)
+
+			nums := []int{2, 5, 6, 0, 0, 1, 2}
+			target := 3
+			ans := search2(nums, target)
+			fmt.Println(ans)
+	*/
 }
