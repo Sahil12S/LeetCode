@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	/*
 		2 SUM (2Sum.go)
@@ -61,4 +63,11 @@ func main() {
 			ans := search2(nums, target)
 			fmt.Println(ans)
 	*/
+	/*
+		Find duplicates in array (findDuplicates.go)
+	*/
+	nums := []int{4, 3, 2, 7, 8, 2, 3, 1}
+	ans := findDuplicates(nums)
+	fmt.Println(ans)
+
 }
