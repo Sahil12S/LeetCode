@@ -65,9 +65,16 @@ func main() {
 	*/
 	/*
 		Find duplicates in array (findDuplicates.go)
+
+			nums := []int{4, 3, 2, 7, 8, 2, 3, 1}
+			ans := findDuplicates(nums)
+			fmt.Println(ans)
+	*/
+	/*
+		Find disappered numbers in array (findDisappeared.go)
 	*/
 	nums := []int{4, 3, 2, 7, 8, 2, 3, 1}
-	ans := findDuplicates(nums)
+	ans := findDisapperedNumbers(nums)
 	fmt.Println(ans)
 
 }
