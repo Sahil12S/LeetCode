@@ -1,3 +1,4 @@
+// Given two arrays, write a function to compute their intersection.
 #include <iostream>
 #include <vector>
 #include <unordered_set>
