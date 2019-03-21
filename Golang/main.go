@@ -96,9 +96,32 @@ func main() {
 			k := 1
 			ans := numSubarrayProductLessThanK(nums, k)
 	*/
-	/* Contiguours Array (contiguousArray.go) */
-	nums := []int{0, 1, 0, 0, 1, 1, 0}
-	ans := findMaxLength(nums)
+	/*
+		Contiguours Array (contiguousArray.go)
+
+			nums := []int{0, 1, 0, 0, 1, 1, 0}
+			ans := findMaxLength(nums)
+	*/
+
+	/*
+		Find all anagrams in a string (findAnagram.go)
+
+			s := "cbaebabacd"
+			p := "abc"
+			ans := findAnagram(s, p)
+	*/
+	/*
+		Median of two sorted arrays (medianOf2SortedArray.go)
+
+			nums1 := []int{1, 2}
+			nums2 := []int{3, 4}
+			ans := findMedianSortedArrays(nums1, nums2)
+	*/
+	/*
+		3Sum (3sum.go)
+	*/
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	ans := threeSum(nums)
 	fmt.Println(ans)
 
 }
