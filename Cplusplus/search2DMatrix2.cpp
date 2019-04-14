@@ -41,7 +41,7 @@ bool searchMatrix( vector< vector<int>>& matrix, int target )
     int row = 0;
     int col = n - 1;
 
-    cout << row << ", " << col << endl;
+    // cout << row << ", " << col << endl;
     while ( row < m && col >= 0 )
     {
         if ( target < matrix[row][col] )

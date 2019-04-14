@@ -20,13 +20,13 @@ private:
         {
             return;
         }
-        
+
         if ( maxL < level )
         {
             ans.push_back( node->val );
             maxL = level;
         }
-        
+
         helper( node->right, level+1, maxL, ans );
         helper( node->left, level+1, maxL, ans );
     }
@@ -44,15 +44,15 @@ class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
         vector<int> ans;
-        
+
         if ( !root )
         {
             return ans;
         }
-        
+
         queue<TreeNode*> q;
         q.push(root);
-        
+
         while ( !q.empty() )
         {
             int size = q.size();

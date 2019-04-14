@@ -3,3 +3,5 @@ test.cpp
 .vscode/
 shipPackage.cpp
 kthSmallestInMatrix.cpp
+stringStream.cpp
+addAndSearchWord.cpp
