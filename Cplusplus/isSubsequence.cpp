@@ -10,8 +10,6 @@ A subsequence of a string is a new string which is formed from the original stri
 */
 
 #include <iostream>
-#include <unordered_map>
-#include <list>
 
 using namespace std;
 
@@ -29,13 +27,10 @@ int main(int argc, char const *argv[])
 
 bool isSubsequence( string s, string t )
 {
-    unordered_map<char, list<int>> myMap;
-
     int j = 0;
 
     for ( int i = 0; i < t.length() && j < s.length(); i++ )
     {
-        // myMap[ t[i] ].push_back( i );
         if ( s[j] == t[i] )
         {
             j++;
