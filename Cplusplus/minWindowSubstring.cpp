@@ -5,9 +5,26 @@
  * contain all the characters in T in complexity O(n).
  */
 
-#include "Headers.h"
+#include <iostream>
+#include <string>
+#include <vector>
 
-std::string LeetCode::minWindow( std::string s, std::string t )
+std::string minWindow( std::string s, std::string t );
+
+int main(int argc, char const *argv[])
+{
+    std::string s = "ADOBECODEBANC";
+    std::string t = "ABC";
+    // std::string s = "a";
+    // std::string t = "aa";
+    std::string result = minWindow( s, t );
+    std::cout << result << std::endl;
+
+    return 0;
+}
+
+
+std::string minWindow( std::string s, std::string t )
 {
     if( s.length() == 0 || t.length() == 0 )
     {
@@ -55,6 +72,5 @@ std::string LeetCode::minWindow( std::string s, std::string t )
             l++;
         }
     }
-
     return s.substr( idx[0], idx[1] - idx[0] );
 }
