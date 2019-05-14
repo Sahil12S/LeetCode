@@ -18,6 +18,7 @@
 // BASIC MULTISET
 
 #include <set>
+#include <queue>
 
 class MedianFinder {
 private:
@@ -108,8 +109,8 @@ public:
 // USING 2 PRIORITY QUEUES
 class MedianFinder {
 private:
-    priority_queue<int> lo_pq;
-    priority_queue<int, vector<int>, greater<int>> hi_pq;
+    std::priority_queue<int> lo_pq;
+    std::priority_queue<int, std::vector<int>, std::greater<int>> hi_pq;
 public:
     /** initialize your data structure here. */
     MedianFinder() {
