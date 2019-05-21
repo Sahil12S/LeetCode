@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <sstream>
 
 std::vector<std::string> findMissingRanges(std::vector<int> &nums, int lower, int upper);
 void helper(int start, int end, std::vector<std::string> &retvec);
@@ -60,12 +61,12 @@ std::vector<std::string> findMissingRanges(std::vector<int> &nums, int lower, in
 
 void helper(int start, int end, std::vector<std::string> &retvec)
 {
-    if (start == end)
+    std::stringstream ss;
+
+    ss << start;
+    if (start != end)
     {
-        retvec.emplace_back(std::to_string(start));
+        ss << "->" << end;
     }
-    else
-    {
-        retvec.emplace_back(std::to_string(start) + "->" + std::to_string(end));
-    }
+    retvec.emplace_back(ss.str());
 }
