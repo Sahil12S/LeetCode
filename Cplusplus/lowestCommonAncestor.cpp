@@ -37,5 +37,5 @@ TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
         return root;
     }
 
-    return leftval != nullptr ? leftval, rightval;
+    return leftval != nullptr ? leftval : rightval;
 }
