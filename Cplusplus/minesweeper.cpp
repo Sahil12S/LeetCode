@@ -143,7 +143,8 @@ std::vector<std::vector<char>> updateBoard(std::vector<std::vector<char>> &board
                     nc >= 0 && nc < cols &&
                     board[nr][nc] == 'E' && !visited[nr][nc])
                 {
-                    visited[nr][nc] = true;
+                    board[nr][nc] = 'B';
+                    // visited[nr][nc] = true;
                     std::cout << "Pushing: " << nr << " " << nc << ", " << board[nr][nc] << '\n';
                     q.push({nr, nc});
                 }
