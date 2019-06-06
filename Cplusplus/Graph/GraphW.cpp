@@ -54,4 +54,9 @@ public:
             std::cout << '\n';
         }
     }
+
+    VVP getGraph()
+    {
+        return adjListUD;
+    }
 };
