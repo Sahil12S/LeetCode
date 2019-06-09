@@ -28,7 +28,7 @@ public:
         for (auto &edge : edges)
         {
             adjListUD[edge[0]].emplace_back(std::make_pair(edge[1], edge[2]));
-            adjListD[edge[1]].emplace_back(std::make_pair(edge[0], edge[2]));
+            adjListUD[edge[1]].emplace_back(std::make_pair(edge[0], edge[2]));
         }
     }
 
