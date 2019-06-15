@@ -10,11 +10,13 @@
 #include <vector>
 
 int minCostClimbingStairs(std::vector<int> &cost);
+int minCostClimbingStairs2(std::vector<int> &cost);
 
 int main()
 {
     std::vector<int> cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
     std::cout << minCostClimbingStairs(cost) << '\n';
+    std::cout << minCostClimbingStairs2(cost) << '\n';
     return 0;
 }
 
@@ -30,4 +32,17 @@ int minCostClimbingStairs(std::vector<int> &cost)
     }
 
     return std::min(dp[cost.size()], dp[cost.size() - 1]);
+}
+
+int minCostClimbingStairs2(std::vector<int> &cost)
+{
+    int first = 0;
+    int second = cost[0];
+    for (int i = 1; i < cost.size(); i++)
+    {
+        int next = cost[i] + std::min(first, second);
+        first = second;
+        second = next;
+    }
+    return std::min(first, second);
 }
