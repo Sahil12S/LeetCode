@@ -48,3 +48,33 @@ int missingElement(VI &nums, int k)
 
     return idx > -1 ? (nums[idx] - counts[idx] - 1 + k) : nums[nums.size() - 1] + k;
 }
+
+int missingElement2(VI &nums, int k)
+{
+    int left = 0;
+    int right = nums.size() - 1;
+
+    int missing = nums[right] - nums[left] + 1 - nums.size();
+
+    if (missing < k)
+    {
+        return nums[right] + k - missing;
+    }
+
+    while (left < right - 1)
+    {
+        int mid = left + (right - left) / 2;
+        int count = nums[mid] - nums[left] - (mid - left);
+
+        if (count >= k)
+        {
+            right = mid;
+        }
+        else
+        {
+            k -= count;
+            left = mid;
+        }
+    }
+    return nums[left] + k;
+}
