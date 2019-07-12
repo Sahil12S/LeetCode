@@ -52,6 +52,12 @@ bool canJump(VI &nums)
     return mem[0];
 */
 
+    // Just keep track of last position from where
+    // we can reach end.
+    // if from current position, we can reach that position
+    // or beyond that, it means we can reach end from current
+    // position and now we keep track of this position
+
     int last_pos = nums.size() - 1;
 
     FORI(nums.size() - 1, 0)
