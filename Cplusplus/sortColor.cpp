@@ -8,11 +8,11 @@
 
 using namespace std;
 
-void sortColors(vector<int>& nums);
+void sortColors(vector<int> &nums);
 
 int main(int argc, char const *argv[])
 {
-    vector<int> nums = {2,0,2,1,1,0};
+    vector<int> nums = {2, 0, 2, 1, 1, 0};
 
     sortColors(nums);
     for (int n : nums)
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-void sortColors(vector<int>& nums)
+void sortColors(vector<int> &nums)
 {
     int l = 0, m = 0;
     int r = nums.size() - 1;
@@ -51,6 +51,5 @@ void sortColors(vector<int>& nums)
         {
             m++;
         }
-        
     }
 }
