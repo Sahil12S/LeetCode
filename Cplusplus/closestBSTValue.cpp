@@ -23,27 +23,15 @@ class Solution
 public:
     int closestValue(TreeNode *root, double target)
     {
-        double diff = std::numeric_limits<double>::max();
-        int value = root->val;
+        int value, closest_val = root->val;
 
         while (root != nullptr)
         {
-            if (std::abs(root->val - target) < diff)
-            {
-                diff = std::abs(root->val - target);
-                value = root->val;
-            }
-            if (diff <= 0.5)
-                break;
-            if (target < root->val)
-            {
-                root = root->left;
-            }
-            else if (target > root->val)
-            {
-                root = root->right;
-            }
+            value = root->val;
+            closest_val = abs(value - target) < abs(closest_val - target) ? value : closest_val;
+            root = target < value ? root->left : root->right;
         }
-        return value;
+
+        return closest_val;
     }
 };
