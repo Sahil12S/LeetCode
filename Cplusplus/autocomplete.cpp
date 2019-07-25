@@ -1,10 +1,14 @@
+#include <vector>
+#include <string>
+#include <algorithm>
+
 class AutocompleteSystem
 {
 private:
     struct TrieNode
     {
         TrieNode *children[27];
-        string sentence;
+        std::string sentence;
         int times;
         TrieNode()
         {
@@ -15,7 +19,7 @@ private:
             sentence = "";
             times = 0;
         }
-        TrieNode(string s, int t) : sentence(s), times(t) {}
+        TrieNode(std::string s, int t) : sentence(s), times(t) {}
     };
     class Trie
     {
@@ -33,7 +37,7 @@ private:
             root = new TrieNode();
         }
 
-        void insert(string s, int times)
+        void insert(std::string s, int times)
         {
             TrieNode *curr = root;
             for (int i = 0; i < s.size(); i++)
@@ -50,9 +54,9 @@ private:
             curr->sentence = s;
         }
 
-        vector<TrieNode *> findsentence(string s)
+        std::vector<TrieNode *> findsentence(std::string s)
         {
-            vector<TrieNode *> list;
+            std::vector<TrieNode *> list;
             TrieNode *curr = root;
             for (char c : s)
             {
@@ -65,7 +69,7 @@ private:
             traverse(s, curr, list);
             return list;
         }
-        void traverse(string s, TrieNode *curr, vector<TrieNode *> &list)
+        void traverse(std::string s, TrieNode *curr, std::vector<TrieNode *> &list)
         {
             if (curr->times > 0)
             {
@@ -88,18 +92,18 @@ private:
     Trie root;
 
 public:
-    AutocompleteSystem(vector<string> &sentences, vector<int> &times)
+    AutocompleteSystem(std::vector<std::string> &sentences, std::vector<int> &times)
     {
         for (int i = 0; i < times.size(); i++)
         {
             root.insert(sentences[i], times[i]);
         }
     }
-    string curr_string = "";
-    vector<string> input(char c)
+    std::string curr_string = "";
+    std::vector<std::string> input(char c)
     {
 
-        vector<string> res;
+        std::vector<std::string> res;
         // Sentence ended
         if (c == '#')
         {
@@ -109,23 +113,23 @@ public:
         else
         {
             curr_string += c;
-            vector<TrieNode *> sent_list;
+            std::vector<TrieNode *> sent_list;
             // Now get list
             sent_list = root.findsentence(curr_string);
-            sort(sent_list.begin(), sent_list.end(),
-                 [](const TrieNode *a, const TrieNode *b) -> bool {
-                     if (a->times == b->times)
-                     {
-                         return a->sentence < b->sentence;
-                     }
-                     return a->times > b->times;
-                 });
+            std::sort(sent_list.begin(), sent_list.end(),
+                      [](const TrieNode *a, const TrieNode *b) -> bool {
+                          if (a->times == b->times)
+                          {
+                              return a->sentence < b->sentence;
+                          }
+                          return a->times > b->times;
+                      });
             // for( int i = 0; i < sent_list.size(); i++ )
             // {
             //     cout << sent_list[i]->sentence << " " << sent_list[i]->times << endl;
             // }
             // int n = ;
-            for (int i = 0; i < min(3, static_cast<int>(sent_list.size())); i++)
+            for (int i = 0; i < std::min(3, static_cast<int>(sent_list.size())); i++)
             {
                 res.emplace_back(sent_list[i]->sentence);
             }
