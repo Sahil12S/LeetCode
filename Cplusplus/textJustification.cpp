@@ -77,6 +77,7 @@ std::string createSentence(int start_idx, int end_idx, const std::vector<std::st
             }
         }
     }
+
     int n = maxWidth - sentence.size();
     for (int j = 0; j < n; j++)
     {
