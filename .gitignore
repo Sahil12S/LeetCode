@@ -1,3 +1,8 @@
 *.out
 env/
 .vscode/
+.vs/
+bin/
+obj/
+*.sln
+*.csproj
