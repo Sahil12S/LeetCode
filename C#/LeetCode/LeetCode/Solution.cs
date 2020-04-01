@@ -28,7 +28,7 @@ namespace LeetCode
             }
             Console.Write("\n");*/
 
-            UncommonWordsFromTwoSentences obj = new UncommonWordsFromTwoSentences();
+            /*UncommonWordsFromTwoSentences obj = new UncommonWordsFromTwoSentences();
             string A = "this apple is sweet";
             string B = "this apple is sour";
             string[] res = obj.UncommonFromSentences(A, B);
@@ -36,7 +36,19 @@ namespace LeetCode
             foreach (string word in res)
             {
                 Console.WriteLine(word);
-            }
+            }*/
+
+            SumOfEvenNumbersAfterQueries obj = new SumOfEvenNumbersAfterQueries();
+            int[] A = { 1, 2, 3, 4 };
+            int[][] queries = {
+                new int[] { 1, 0 },
+                new int[] { -3, 1 },
+                new int[] { -4, 0 },
+                new int[] { 2, 3 }
+            };
+            int[] res = obj.SumEvenAfterQueries(A, queries);
+            
+            Console.WriteLine("[{0}]", string.Join(", ", res));
         }
     }
 }
