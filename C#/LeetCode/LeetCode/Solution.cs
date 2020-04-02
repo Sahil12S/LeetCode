@@ -38,7 +38,7 @@ namespace LeetCode
                 Console.WriteLine(word);
             }*/
 
-            SumOfEvenNumbersAfterQueries obj = new SumOfEvenNumbersAfterQueries();
+            /*SumOfEvenNumbersAfterQueries obj = new SumOfEvenNumbersAfterQueries();
             int[] A = { 1, 2, 3, 4 };
             int[][] queries = {
                 new int[] { 1, 0 },
@@ -48,7 +48,14 @@ namespace LeetCode
             };
             int[] res = obj.SumEvenAfterQueries(A, queries);
             
-            Console.WriteLine("[{0}]", string.Join(", ", res));
+            Console.WriteLine("[{0}]", string.Join(", ", res));*/
+
+            SingleNumber obj = new SingleNumber();
+            int[] nums = { 4, 1, 2, 1, 2 };
+            //int[] nums = { 1 };
+
+            Console.WriteLine(obj.SingleNum(nums));
+
         }
     }
 }
