@@ -50,11 +50,16 @@ namespace LeetCode
             
             Console.WriteLine("[{0}]", string.Join(", ", res));*/
 
-            SingleNumber obj = new SingleNumber();
+            /*SingleNumber obj = new SingleNumber();
             int[] nums = { 4, 1, 2, 1, 2 };
             //int[] nums = { 1 };
 
-            Console.WriteLine(obj.SingleNum(nums));
+            Console.WriteLine(obj.SingleNum(nums));*/
+
+            HappyNumber obj = new HappyNumber();
+            int n = 19;
+
+            Console.WriteLine(obj.IsHappy(n));
 
         }
     }
