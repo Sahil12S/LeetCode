@@ -69,11 +69,18 @@ namespace LeetCode
 
             Console.WriteLine(res);*/
 
-            MoveZeroes obj = new MoveZeroes();
+            /*MoveZeroes obj = new MoveZeroes();
             int[] nums = { 0, 1, 0, 3, 12 };
             obj.MoveZero(nums);
 
-            Console.WriteLine("[{0}]", string.Join(", ", nums));
+            Console.WriteLine("[{0}]", string.Join(", ", nums));*/
+
+            BestTimeToBuyAndSellStock2 obj = new BestTimeToBuyAndSellStock2();
+            //int[] prices = { 7, 1, 5, 3, 6, 4 };
+            //int[] prices = { 1, 2, 3, 4, 5 };
+            int[] prices = { };
+            int profit = obj.MaxProfit(prices);
+            Console.WriteLine("profit: {0}", profit);
 
         }
     }
