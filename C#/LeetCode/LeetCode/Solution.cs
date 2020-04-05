@@ -56,10 +56,24 @@ namespace LeetCode
 
             Console.WriteLine(obj.SingleNum(nums));*/
 
-            HappyNumber obj = new HappyNumber();
+            /*HappyNumber obj = new HappyNumber();
             int n = 19;
 
-            Console.WriteLine(obj.IsHappy(n));
+            Console.WriteLine(obj.IsHappy(n));*/
+
+            /*MaximumSubarray obj = new MaximumSubarray();
+
+            //int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            int[] nums = { -2, 1, 10, -10, 10, 1 };
+            int res = obj.MaxSubArray(nums);
+
+            Console.WriteLine(res);*/
+
+            MoveZeroes obj = new MoveZeroes();
+            int[] nums = { 0, 1, 0, 3, 12 };
+            obj.MoveZero(nums);
+
+            Console.WriteLine("[{0}]", string.Join(", ", nums));
 
         }
     }
