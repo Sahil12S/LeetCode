@@ -75,12 +75,18 @@ namespace LeetCode
 
             Console.WriteLine("[{0}]", string.Join(", ", nums));*/
 
-            BestTimeToBuyAndSellStock2 obj = new BestTimeToBuyAndSellStock2();
+            /*BestTimeToBuyAndSellStock2 obj = new BestTimeToBuyAndSellStock2();
             //int[] prices = { 7, 1, 5, 3, 6, 4 };
             //int[] prices = { 1, 2, 3, 4, 5 };
             int[] prices = { };
             int profit = obj.MaxProfit(prices);
-            Console.WriteLine("profit: {0}", profit);
+            Console.WriteLine("profit: {0}", profit);*/
+
+            ReverseString obj = new ReverseString();
+            //char[] s = { 'h', 'e', 'l', 'l', 'o' };
+            char[] s = { 'a', 'b', 'c' };
+            obj.ReverseStr(s);
+            Console.WriteLine("[{0}]", string.Join(", ", s));
 
         }
     }
