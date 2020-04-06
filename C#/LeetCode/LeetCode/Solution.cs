@@ -82,11 +82,22 @@ namespace LeetCode
             int profit = obj.MaxProfit(prices);
             Console.WriteLine("profit: {0}", profit);*/
 
-            ReverseString obj = new ReverseString();
+            /*ReverseString obj = new ReverseString();
             //char[] s = { 'h', 'e', 'l', 'l', 'o' };
             char[] s = { 'a', 'b', 'c' };
             obj.ReverseStr(s);
-            Console.WriteLine("[{0}]", string.Join(", ", s));
+            Console.WriteLine("[{0}]", string.Join(", ", s));*/
+
+            GroupAnagrams obj = new GroupAnagrams();
+            string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat", "bat" };
+            IList<IList<string>> res = obj.GroupAnagram(strs);
+
+            foreach (IList<string> l in res)
+            {
+                Console.WriteLine("[{0}]", string.Join(", ", l));
+            }
+
+            
 
         }
     }
