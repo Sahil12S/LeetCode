@@ -97,14 +97,17 @@ namespace LeetCode
                 Console.WriteLine("[{0}]", string.Join(", ", l));
             }*/
 
-            CountingElements obj = new CountingElements();
+            /*CountingElements obj = new CountingElements();
             //int[] arr = { 1, 3, 2, 3, 5, 0 };
             //int[] arr = { 1, 1, 3, 3, 5, 5, 7, 7 };
             int[] arr = { 1, 2, 3 };
             int res = obj.CountElements(arr);
-            Console.WriteLine(res);
+            Console.WriteLine(res);*/
 
-            
+            DivisorGame obj = new DivisorGame();
+            int N = 3;
+            bool res = obj.DivisorGames(N);
+            Console.WriteLine(res);
 
         }
     }
