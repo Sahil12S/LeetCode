@@ -104,9 +104,14 @@ namespace LeetCode
             int res = obj.CountElements(arr);
             Console.WriteLine(res);*/
 
-            DivisorGame obj = new DivisorGame();
+            /*DivisorGame obj = new DivisorGame();
             int N = 3;
             bool res = obj.DivisorGames(N);
+            Console.WriteLine(res);*/
+
+            LastStoneWeight obj = new LastStoneWeight();
+            int[] stones = { 2, 7, 4, 1, 8, 1 };
+            int res = obj.LastStoneWt(stones);
             Console.WriteLine(res);
 
         }
