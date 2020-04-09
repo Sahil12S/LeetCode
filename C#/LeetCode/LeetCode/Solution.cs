@@ -109,9 +109,20 @@ namespace LeetCode
             bool res = obj.DivisorGames(N);
             Console.WriteLine(res);*/
 
-            LastStoneWeight obj = new LastStoneWeight();
+            /*LastStoneWeight obj = new LastStoneWeight();
             int[] stones = { 2, 7, 4, 1, 8, 1 };
             int res = obj.LastStoneWt(stones);
+            Console.WriteLine(res);*/
+
+            /*MaximumNumberOfBalloons obj = new MaximumNumberOfBalloons();
+            string text = "loonbalxballpoon";
+            int res = obj.MaxNumberOfBalloons(text);
+            Console.WriteLine(res);*/
+            
+            BackspaceStringCompare obj = new BackspaceStringCompare();
+            string S = "d##########c";
+            string T = "d#c";
+            bool res = obj.BackspaceCompare(S, T);
             Console.WriteLine(res);
 
         }
