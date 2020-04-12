@@ -125,7 +125,7 @@ namespace LeetCode
             bool res = obj.BackspaceCompare(S, T);
             Console.WriteLine(res);*/
 
-            /*MinStack obj = new MinStack();
+            MinStack obj = new MinStack();
             obj.Push(-2);
             obj.Push(0);
             obj.Push(-3);
@@ -135,12 +135,12 @@ namespace LeetCode
             res = obj.Top();
             Console.WriteLine("{0}, expected: {1}", res, 0);
             res = obj.GetMin();
-            Console.WriteLine("{0}, expected: {1}", res, -2);*/
+            Console.WriteLine("{0}, expected: {1}", res, -2);
 
-            MinCostToRemoveAdjacentDuplicate obj = new MinCostToRemoveAdjacentDuplicate();
+            /*MinCostToRemoveAdjacentDuplicate obj = new MinCostToRemoveAdjacentDuplicate();
             int[] C = { 1,2 , 3, 4 };
             int ans = obj.MinCost("ababa", C);
-            Console.WriteLine(ans);
+            Console.WriteLine(ans);*/
         }
     }
 }
