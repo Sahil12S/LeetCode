@@ -118,13 +118,29 @@ namespace LeetCode
             string text = "loonbalxballpoon";
             int res = obj.MaxNumberOfBalloons(text);
             Console.WriteLine(res);*/
-            
-            BackspaceStringCompare obj = new BackspaceStringCompare();
+
+            /*BackspaceStringCompare obj = new BackspaceStringCompare();
             string S = "d##########c";
             string T = "d#c";
             bool res = obj.BackspaceCompare(S, T);
-            Console.WriteLine(res);
+            Console.WriteLine(res);*/
 
+            /*MinStack obj = new MinStack();
+            obj.Push(-2);
+            obj.Push(0);
+            obj.Push(-3);
+            int res = obj.GetMin();
+            Console.WriteLine("{0}, expected: {1}", res, -3);
+            obj.Pop();
+            res = obj.Top();
+            Console.WriteLine("{0}, expected: {1}", res, 0);
+            res = obj.GetMin();
+            Console.WriteLine("{0}, expected: {1}", res, -2);*/
+
+            MinCostToRemoveAdjacentDuplicate obj = new MinCostToRemoveAdjacentDuplicate();
+            int[] C = { 1,2 , 3, 4 };
+            int ans = obj.MinCost("ababa", C);
+            Console.WriteLine(ans);
         }
     }
 }
