@@ -161,12 +161,16 @@ namespace LeetCode
             string s = "(*))";
             Console.WriteLine(obj.CheckValidString(s));*/
 
-            DeviceNameSystem obj = new DeviceNameSystem();
+            /*DeviceNameSystem obj = new DeviceNameSystem();
             //string[] deviceNames = { "switch", "tv", "switch", "tv", "switch", "tv" };
             //string[] deviceNames = { "mixer", "toaster", "mixer", "tv" };
             string[] deviceNames = { "lamp", "lamp", "tv", "lamp" };
             string[] res = obj.GetUniqueDeviceNames(deviceNames);
-            Console.WriteLine("[{0}]", string.Join(", ", res));
+            Console.WriteLine("[{0}]", string.Join(", ", res));*/
+
+            ThirdMaximumNumber obj = new ThirdMaximumNumber();
+            int[] nums = new int[] { 1, 1, 2 };
+            Console.WriteLine(obj.ThirdMax(nums));
         }
     }
 }
