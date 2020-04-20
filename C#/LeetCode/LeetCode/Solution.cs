@@ -125,7 +125,7 @@ namespace LeetCode
             bool res = obj.BackspaceCompare(S, T);
             Console.WriteLine(res);*/
 
-            MinStack obj = new MinStack();
+            /*MinStack obj = new MinStack();
             obj.Push(-2);
             obj.Push(0);
             obj.Push(-3);
@@ -135,12 +135,38 @@ namespace LeetCode
             res = obj.Top();
             Console.WriteLine("{0}, expected: {1}", res, 0);
             res = obj.GetMin();
-            Console.WriteLine("{0}, expected: {1}", res, -2);
+            Console.WriteLine("{0}, expected: {1}", res, -2);*/
 
             /*MinCostToRemoveAdjacentDuplicate obj = new MinCostToRemoveAdjacentDuplicate();
             int[] C = { 1,2 , 3, 4 };
             int ans = obj.MinCost("ababa", C);
             Console.WriteLine(ans);*/
+
+            /*ContiguousArray obj = new ContiguousArray();
+            int[] nums = { 0, 1, 1, 1, 1, 0, 1, 0 };
+            Console.WriteLine(obj.FindMaxLength(nums));*/
+
+            /*PerformStringShifts obj = new PerformStringShifts();
+            string s = "abcdefg";
+            int[][] shift = 
+            {
+                new int[] {1, 1},
+                new int[] {1, 1},
+                new int[] {0, 2},
+                new int[] {1, 3}
+            };
+            Console.WriteLine(obj.StringShift(s, shift));*/
+
+            /*ValidParenthesisString obj = new ValidParenthesisString();
+            string s = "(*))";
+            Console.WriteLine(obj.CheckValidString(s));*/
+
+            DeviceNameSystem obj = new DeviceNameSystem();
+            //string[] deviceNames = { "switch", "tv", "switch", "tv", "switch", "tv" };
+            //string[] deviceNames = { "mixer", "toaster", "mixer", "tv" };
+            string[] deviceNames = { "lamp", "lamp", "tv", "lamp" };
+            string[] res = obj.GetUniqueDeviceNames(deviceNames);
+            Console.WriteLine("[{0}]", string.Join(", ", res));
         }
     }
 }
