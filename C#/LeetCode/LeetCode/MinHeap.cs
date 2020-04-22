@@ -108,5 +108,10 @@ namespace LeetCode
 
             ReCalculate();
         }
+
+        public int Count()
+        {
+            return _size;
+        }
     }
 }

@@ -172,15 +172,16 @@ namespace LeetCode
             int[] nums = new int[] { 1, 1, 2 };
             Console.WriteLine(obj.ThirdMax(nums));*/
 
-            /*int[] arr = new int[] { 4, 5, 8, 2 };
-            KthLargest obj = new KthLargest(3, arr);
+            int[] arr = new int[] { 4, 5, 8, 2 };
+            int k = 3;
+            KthLargest obj = new KthLargest(k, arr);
             Console.WriteLine(obj.Add(3));
             Console.WriteLine(obj.Add(5));
             Console.WriteLine(obj.Add(10));
             Console.WriteLine(obj.Add(9));
-            Console.WriteLine(obj.Add(4));*/
+            Console.WriteLine(obj.Add(4));
 
-            MinHeap obj = new MinHeap(11);
+            /*MinHeap obj = new MinHeap(11);
             obj.Add(3);
             obj.Add(2);
             obj.Add(1);
@@ -192,7 +193,7 @@ namespace LeetCode
             Console.WriteLine(obj.Pop());
             Console.WriteLine(obj.Pop());
             obj.Add(-1);
-            Console.WriteLine(obj.Peek());
+            Console.WriteLine(obj.Peek());*/
         }
     }
 }
