@@ -6,3 +6,6 @@ bin/
 obj/
 *.sln
 *.csproj
+*.vcxproj
+*.filters
+*.user
